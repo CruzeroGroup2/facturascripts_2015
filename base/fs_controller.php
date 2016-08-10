@@ -136,6 +136,7 @@ class fs_controller
          
          $this->empresa = new empresa();
          $this->default_items = new fs_default_items();
+         $this->default_items->setRequirenum2($this->empresa->requerirnum2);
          
          /// cargamos las extensiones
          $fsext = new fs_extension();

@@ -152,6 +152,11 @@
       <nulo>YES</nulo>
    </columna>
    <columna>
+      <nombre>requerirnum2</nombre>
+      <tipo>boolean</tipo>
+      <nulo>YES</nulo>
+   </columna>
+   <columna>
       <nombre>stockpedidos</nombre>
       <tipo>boolean</tipo>
       <nulo>YES</nulo>

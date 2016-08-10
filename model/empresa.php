@@ -42,6 +42,11 @@ class empresa extends fs_model
     * @var type 
     */
    public $recequivalencia;
+
+    /**
+     * @var bool
+     */
+   public $requerirnum2;
    public $codserie;
    public $codalmacen;
    public $codpago;
@@ -91,6 +96,7 @@ class empresa extends fs_model
          $this->stockpedidos = $this->str2bool($e[0]['stockpedidos']);
          $this->contintegrada = $this->str2bool($e[0]['contintegrada']);
          $this->recequivalencia = $this->str2bool($e[0]['recequivalencia']);
+         $this->requerirnum2 = isset($e[0]['requerirnum2']) ? $this->str2bool($e[0]['requerirnum2']) : false;
          $this->codserie = $e[0]['codserie'];
          $this->codalmacen = $e[0]['codalmacen'];
          $this->codpago = $e[0]['codpago'];
@@ -123,10 +129,10 @@ class empresa extends fs_model
    {
       $this->clean_cache();
       $e = mt_rand(1, 9999);
-      return "INSERT INTO ".$this->table_name." (stockpedidos,contintegrada,recequivalencia,codserie,
+      return "INSERT INTO ".$this->table_name." (stockpedidos,contintegrada,recequivalencia,requerirnum2,codserie,
          codalmacen,codpago,coddivisa,codejercicio,web,email,fax,telefono,codpais,apartado,provincia,
          ciudad,codpostal,direccion,administrador,codedi,cifnif,nombre,nombrecorto,lema,horario) VALUES
-         (NULL,FALSE,NULL,'A','ALG','CONT','EUR','0001','https://www.facturascripts.com',NULL,NULL,
+         (NULL,FALSE,NULL,NULL,'A','ALG','CONT','EUR','0001','https://www.facturascripts.com',NULL,NULL,
          NULL,'ESP',NULL,NULL,NULL,NULL,'C/ Falsa, 123','',NULL,'00000014Z', 
          'Empresa ".$e." S.L.', 'E-".$e."','','');";
    }
@@ -230,6 +236,7 @@ class empresa extends fs_model
                  .", codalmacen = ".$this->var2str($this->codalmacen)
                  .", codserie = ".$this->var2str($this->codserie)
                  .", recequivalencia = ".$this->var2str($this->recequivalencia)
+                 .", requerirnum2 = ".$this->var2str($this->requerirnum2)
                  .", contintegrada = ".$this->var2str($this->contintegrada)
                  .", stockpedidos = ".$this->var2str($this->stockpedidos)
                  .", lema = ".$this->var2str($this->lema)

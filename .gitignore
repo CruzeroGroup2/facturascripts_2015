@@ -1,4 +1,7 @@
+.projectKnowledge/
 /nbproject/
 /plugins/
 /doc/
 /tmp/
+/bbdd/
+config.php

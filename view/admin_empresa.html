@@ -304,6 +304,12 @@
                            Aplicar recargo de equivalencia
                         </label>
                      </div>
+                     <div class="checkbox">
+                        <label>
+                           <input type="checkbox" name="requerirnum2" value="true"{if="$fsc->empresa->requerirnum2"} checked="checked"{/if}/>
+                           Requerir número 2 para Guardar la Factura
+                        </label>
+                     </div>
                   </div>
                   <div class="form-group col-sm-5">
                      <a href="{$fsc->forma_pago->url()}">Forma de pago</a>:

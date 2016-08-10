@@ -36,6 +36,8 @@ class fs_default_items
    private static $codpais;
    private static $codproveedor;
    private static $codserie;
+
+   private static $requirenum2;
    
    public function __construct()
    {
@@ -74,6 +76,10 @@ class fs_default_items
       
       if( !isset(self::$codserie) )
          self::$codserie = NULL;
+
+      if(!isset(self::$requirenum2)) {
+          self::$requirenum2 = null;
+      }
    }
    
    public function codejercicio()
@@ -195,4 +201,20 @@ class fs_default_items
    {
       self::$showing_page = $name;
    }
+
+    /**
+     * @return null
+     */
+    public function getRequirenum2() {
+        return self::$requirenum2;
+    }
+
+    /**
+     * @param boolean $requirenum2
+     */
+    public function setRequirenum2($requirenum2) {
+        self::$requirenum2 = $requirenum2;
+    }
+
+
 }
