@@ -217,7 +217,9 @@ class ejercicio extends fs_model
          else
             return FALSE;
       }
-      else if($crear)
+/*
+ *   Desabilitando debido a que se crean ejercicios multiples y no sabemos porque ¬¬
+     else if($crear)
       {
          $eje = new ejercicio();
          $eje->codejercicio = $eje->get_new_codigo( Date('Y', strtotime($fecha)) );
@@ -230,7 +232,7 @@ class ejercicio extends fs_model
          }
          else
             return FALSE;
-      }
+      } */
       else
          return FALSE;
    }
